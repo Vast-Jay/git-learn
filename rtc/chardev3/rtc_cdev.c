@@ -65,7 +65,7 @@ static ssize_t rtc_read(struct file* fp, char __user* buf, size_t size, loff_t* 
         return -1;
     }
 
-    return 0;
+    return sizeof(struct rtc_time);
 }
 
 static ssize_t rtc_write(struct file* fp, const char __user* buf, size_t size, loff_t* pos)
@@ -88,7 +88,6 @@ static int __init rtc_init(void)
 
     regs = (rtc_reg_t*)ioremap(RTC_BASE, sizeof(rtc_reg_t));
     printk("rtc_init\n");
-    unregister_chrdev(222, "rtc2-demo");
 
     dev = MKDEV(222,0);
 
