@@ -9,5 +9,6 @@
 *.mod.o.cmd
 *.o.cmd
 *.ko.cmd
-
+*.out
+*.code-workspace
 
