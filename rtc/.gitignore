@@ -5,3 +5,9 @@
 *.order
 *.ko
 *.symvers
+*.mod.cmd
+*.mod.o.cmd
+*.o.cmd
+*.ko.cmd
+
+
